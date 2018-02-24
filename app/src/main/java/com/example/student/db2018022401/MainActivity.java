@@ -27,9 +27,19 @@ public class MainActivity extends AppCompatActivity {
         m2.put("code", "04");
         mylist.add(m2);
 
+        HashMap<String, String> m3 = new HashMap();
+        m3.put("city", "台南");
+        m3.put("code", "06");
+        mylist.add(m3);
+
+        HashMap<String, String> m4 = new HashMap();
+        m4.put("city", "高雄");
+        m4.put("code", "07");
+        mylist.add(m4);
+
         SimpleAdapter adapter = new SimpleAdapter(MainActivity.this,
-                mylist, android.R.layout.simple_list_item_2, new String[] {"city", "code"},
-                new int[] {android.R.id.text1, android.R.id.text2});
+                mylist, R.layout.myitem, new String[] {"city", "code"},
+                new int[] {R.id.textView, R.id.textView2});
         lv.setAdapter(adapter);
 
     }
